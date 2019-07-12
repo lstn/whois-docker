@@ -1,6 +1,6 @@
-FROM debian:stretch-20190708  as whois-builder
+FROM debian:stretch-20190708 as whois-builder
 
-RUN apt-get update -qq && apt-get install -y whois binutils
+RUN apt-get update -qq && apt-get install -y whois=5.2.17~deb9u1
 
 FROM gcr.io/distroless/base
 
